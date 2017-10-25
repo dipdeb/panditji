@@ -9,8 +9,25 @@ cities['West Bengal'] = new Array('--Select City--','Kolkata','Siliguri');
 cities['Karnataka'] = new Array('--Select City--','Bengaluru','Mysore','Mangalore');
 
 
+var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+var userList = new List('priests', options);
+
+
+
 // City lists
 var locations = new Array();
+
+//var mydata = JSON.parse(data);
+//console.log(data)
+var stateElem = document.getElementById('state');
+for(var state in data) {
+	stateElem.innerHTML += '<option value="'+state+'">'+state+'</option>'	
+	/*for (var city in data[state])
+		console.log(data[state][city]);*/
+}
 
 locations['Assam'] = new Array();
 locations['Assam']['Guwahati']          = new Array('--Select Location--','Maligaon','Rehabari');
@@ -19,17 +36,17 @@ locations['Assam']['Sibsagar']          = new Array('--Select Location--','Bishn
 
 locations['West Bengal'] = new Array();
 locations['West Bengal']['Kolkata'] = new Array('--Select Location--','Baranagar','Bally');
-locations['West Bengal']['Siliguri']       = new Array('--Select Location--','Ciudad Juárez','Chihuahua');
+locations['West Bengal']['Siliguri']       = new Array('--Select Location--','Siligure Central','MG Road');
 
 locations['Karnataka'] = new Array();
-locations['Karnataka']['Bengaluru'] = new Array('--Select Location--','Los Angeles','San Francisco');
-locations['Karnataka']['Mysore']    = new Array('--Select Location--','Miami','Orlando');
-locations['Karnataka']['Mangalore']   = new Array('--Select Location--','Buffalo','new York');
+locations['Karnataka']['Bengaluru'] = new Array('--Select Location--','MG Road','Richmond Road');
+locations['Karnataka']['Mysore']    = new Array('--Select Location--','MG Road','Palace');
+locations['Karnataka']['Mangalore']   = new Array('--Select Location--','Beach','Central');
 
 
 function setCities() {
   stateSel = document.getElementById('state');
-  cityList = cities[stateSel.value];
+  cityList = data[stateSel.value];
   changeSelect('city', cityList, cityList);
   setLocations();
 }

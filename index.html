@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="statecity.js"></script>
+<title>Welcome to Panditji</title>
+<link rel="stylesheet" type="text/css" href="./css/table.css"></link>
+<script type="text/javascript" src="state-city.json"></script>
 <style>
 table {
     font-family: arial, sans-serif;
@@ -37,41 +39,6 @@ tr:nth-child(even) {
 <td style="text-align: left;">
 <select name="state" id="state" onchange="setCities();">
 <option value="">------------Select State------------</option>
-<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-<option value="Andhra Pradesh">Andhra Pradesh</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-<option value="Assam">Assam</option>
-<option value="Bihar">Bihar</option>
-<option value="Chandigarh">Chandigarh</option>
-<option value="Chhattisgarh">Chhattisgarh</option>
-<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-<option value="Daman and Diu">Daman and Diu</option>
-<option value="Delhi">Delhi</option>
-<option value="Goa">Goa</option>
-<option value="Gujarat">Gujarat</option>
-<option value="Haryana">Haryana</option>
-<option value="Himachal Pradesh">Himachal Pradesh</option>
-<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-<option value="Jharkhand">Jharkhand</option>
-<option value="Karnataka">Karnataka</option>
-<option value="Kerala">Kerala</option>
-<option value="Lakshadweep">Lakshadweep</option>
-<option value="Madhya Pradesh">Madhya Pradesh</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Manipur">Manipur</option>
-<option value="Meghalaya">Meghalaya</option>
-<option value="Mizoram">Mizoram</option>
-<option value="Nagaland">Nagaland</option>
-<option value="Orissa">Orissa</option>
-<option value="Pondicherry">Pondicherry</option>
-<option value="Punjab">Punjab</option>
-<option value="Rajasthan">Rajasthan</option>
-<option value="Sikkim">Sikkim</option>
-<option value="Tamil Nadu">Tamil Nadu</option>
-<option value="Tripura">Tripura</option>
-<option value="Uttaranchal">Uttaranchal</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="West Bengal">West Bengal</option>
 </select>
 </td>
 </tr><tr>
@@ -85,7 +52,7 @@ tr:nth-child(even) {
 <td style="text-align: left;">Location</td>
 <td style="text-align: left;">
 <select name="location"  id="location">
-  <option value="">Please select a Country</option>
+  <option value="">Please select a Location</option>
 </select>
 </td>
 </tr>
@@ -93,39 +60,58 @@ tr:nth-child(even) {
 </form>
 </fieldset>
 
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Experience</th>
-    <th>Religion</th>
-    <th>Contact number</th>
-  </tr>
-  <tr>
-    <td>Ujjal Phukan</td>
-    <td>40</td>
-    <td>10</td>
-    <td>Hindu</td>
-    <td>99933344412</td>
-  </tr>
-  <tr>
-    <td>Dipanjan Deb</td>
-    <td>38</td>
-    <td>11</td>
-    <td>Hindu</td>
-    <td>9993325325325</td>
-  </tr>
-  <tr>
-    <td>hari Sharma</td>
-    <td>30</td>
-    <td>5</td>
-    <td>Hindu</td>
-    <td>3523532552</td>
-  </tr>
-</table>
-
+<div id="priests">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+  <table>
+    <!-- IMPORTANT, class="list" have to be at tbody -->
+    <tbody class="list">
+	<tr>
+    	<th>Name</th>
+	    <th>Age</th>
+	    <th>Experience</th>
+	    <th>Religion</th>
+    	<th>Contact number</th>
+	 </tr>
+      <tr>
+        <td class="name">Umashankar Tripathi</td>
+        <td class="age">56</td>
+        <td class="exp">14</td>
+    	<td>Hindu</td>
+	    <td>9423532533</td>
+      </tr>
+      <tr>
+        <td class="name">Himanta Biswa Sharma</td>
+        <td class="age">85</td>
+        <td class="exp">36</td>
+    	<td>Hindu</td>
+	    <td>9923532552</td>
+      </tr>
+      <tr>
+        <td class="name">Kamalesh Chatterjee</td>
+        <td class="age">36</td>
+        <td class="exp">3</td>
+    	<td>Hindu</td>
+	    <td>9566532526</td>
+      </tr>
+      <tr>
+        <td class="name">Gajodhar Sharma</td>
+        <td class="age">43</td>
+        <td class="exp">11</td>
+    	<td>Hindu</td>
+	    <td>9523532556</td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>
+<script src="list.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="statecity.js"></script>
 </body>
 </html> 
