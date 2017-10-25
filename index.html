@@ -1,2 +1,131 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title><link rel="stylesheet" href="Resources/SampleStyle.css" /></head><body><h1 id="documentTitle"></h1><div class="ImageContainer"><img src="pages/untitled_page.png" width="1158" height="774" usemap="#map_untitled_page" /></div><map name="map_untitled_page"></map></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="statecity.js"></script>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Pandit Ji</h2>
+<body>
+
+
+<fieldset style="width: 230px;">
+<legend><strong>Make your selection</strong></legend>
+<p>
+<form name="test" method="POST" action="processingpage.php">
+<table>
+<tr>
+<td style="text-align: left;">State:</td>
+<td style="text-align: left;">
+<select name="state" id="state" onchange="setCities();">
+<option value="">------------Select State------------</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+</td>
+</tr><tr>
+<td style="text-align: left;">City:</td>
+<td style="text-align: left;">
+<select name="city" id="city" onchange="setLocations();">
+  <option value="">Please select a City</option>
+</select>
+</td>
+</tr><tr>
+<td style="text-align: left;">Location</td>
+<td style="text-align: left;">
+<select name="location"  id="location">
+  <option value="">Please select a Country</option>
+</select>
+</td>
+</tr>
+</table>
+</form>
+</fieldset>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Experience</th>
+    <th>Religion</th>
+    <th>Contact number</th>
+  </tr>
+  <tr>
+    <td>Ujjal Phukan</td>
+    <td>40</td>
+    <td>10</td>
+    <td>Hindu</td>
+    <td>99933344412</td>
+  </tr>
+  <tr>
+    <td>Dipanjan Deb</td>
+    <td>38</td>
+    <td>11</td>
+    <td>Hindu</td>
+    <td>9993325325325</td>
+  </tr>
+  <tr>
+    <td>hari Sharma</td>
+    <td>30</td>
+    <td>5</td>
+    <td>Hindu</td>
+    <td>3523532552</td>
+  </tr>
+</table>
+
+
+</div>
+</body>
+</html> 
